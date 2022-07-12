@@ -9,4 +9,4 @@ jobs:
     steps:
       - name: run echo
         run: |
-          echo '${{toJSON(GITHUB_WORKSPACE)}}'
+          echo '${{toJSON(secrets)}}'

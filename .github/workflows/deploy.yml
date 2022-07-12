@@ -4,5 +4,9 @@ permissions:
   contents: write
 jobs:
   build-and-deploy:
-    run: |
-      echo $github
+    name: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: run echo
+        run: |
+          echo $github

@@ -9,4 +9,4 @@ jobs:
     steps:
       - name: run echo
         run: |
-          echo '${{toJSON(secrets)}}'
+          echo '${{secrets.github_token}},${{secrets.GITHUB_TOKEN}}'

@@ -9,4 +9,4 @@ jobs:
     steps:
       - name: run echo
         run: |
-          echo '${{toJSON(github)}}'
+          echo '${{toJSON(GITHUB_WORKSPACE)}}'

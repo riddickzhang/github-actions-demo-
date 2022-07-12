@@ -21,7 +21,6 @@
   },
   "dependencies": {
     "echarts": "5.3.3",
-    "frontend-library": "1.2.18",
     "html2canvas": "^1.0.0-rc.7",
     "js-file-download": "0.4.11",
     "jspdf": "^2.3.1",

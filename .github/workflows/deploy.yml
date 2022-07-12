@@ -1,5 +1,6 @@
 name: Delopy
-on: -push
+on:
+  - push
 jobs:
   install-environment:
     runs-on: ubuntu-latest

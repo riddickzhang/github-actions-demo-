@@ -11,8 +11,7 @@ jobs:
         uses: actions/setup-node@v2-beta
         with:
           node-version: 14
-          registry-url: https://npm.pkg.github.com/
           cache: npm
       - name: npm install
         run: |
-          npm install
+          npm ci

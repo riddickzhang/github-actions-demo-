@@ -14,8 +14,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           cache: npm
       - name: npm install
-        run: |
-          npm install --no-audit
+        run: npm install --no-audit
         shell: bash
         env:
           NODE_AUTH_TOKEN: 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

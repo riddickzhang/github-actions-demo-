@@ -11,6 +11,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.3.0
+          registry-url: https://nexus.snc-tools.com:1443/repository/dev-sn-npm-repository-group/
+          _auth: dGlhbm5hLmNoZW46VmxaRkh1bTNsSTBz
+          email: tianna.chen@supernovatech.com
           cache: npm
       - name: npm install
         run: |

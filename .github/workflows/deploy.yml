@@ -2,7 +2,7 @@ name: Delopy
 on:
   - push
 env:
-DAY_OF_WEEK: Monday
+  DAY_OF_WEEK: Monday
 
 jobs:
   install-environment:

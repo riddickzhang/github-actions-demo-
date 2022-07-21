@@ -13,10 +13,6 @@ jobs:
           node-version: 16.3.0
           registry-url: https://npm.pkg.github.com/
           cache: npm
-          always-auth: true
-          email: tianna.chen@supernovatech.com
       - name: npm install
-        run: npm install --no-audit
+        run: echo ${{toJSON(steps.run.outputs)}}
         shell: bash
-        env:
-          NODE_AUTH_TOKEN: dGlhbm5hLmNoZW46VmxaRkh1bTNsSTBz

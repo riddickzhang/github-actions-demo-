@@ -3,7 +3,7 @@ on:
   - push
 env:
   DAY_OF_WEEK: Monday
-
+  node_version: ''
 jobs:
   install-environment:
     runs-on: ubuntu-latest
@@ -13,13 +13,6 @@ jobs:
       - name: install node
         uses: actions/setup-node@v3
         with:
-          node-version: 16.3.0
-          cache: npm
+          node-version: ${{ node_version || '16' }}
       - name: npm install
-        run: echo ${{toJSON(steps)}}
-
-      - name: "Say Hello Mona it's Monday"
-        if: ${{ env.DAY_OF_WEEK == 'Monday' }}
-        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
-        env:
-          First_Name: Mona
+        run: npm install

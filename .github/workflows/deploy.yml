@@ -1,16 +1,14 @@
-name: Delopy
-on:
-  - push
+env:
+  DAY_OF_WEEK: Monday
+
 jobs:
-  install-environment:
+  greeting_job:
     runs-on: ubuntu-latest
+    env:
+      Greeting: Hello
     steps:
-      - name: checkout
-        uses: actions/checkout@v3
-      - name: install node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.3.0
-          cache: npm
-      - name: npm install
-        run: echo ${{toJSON(steps)}}
+      - name: "Say Hello Mona it's Monday"
+        if: ${{ env.DAY_OF_WEEK == 'Monday' }}
+        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
+        env:
+          First_Name: Mona

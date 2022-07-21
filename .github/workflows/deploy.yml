@@ -13,6 +13,6 @@ jobs:
       - name: install node
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ node_version || '16' }}
+          node-version: "${{ node_version || '16' }}"
       - name: npm install
         run: npm install

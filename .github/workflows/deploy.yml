@@ -13,4 +13,4 @@ jobs:
           node-version: 16.3.0
           cache: npm
       - name: npm install
-        run: echo ${{toJSON(steps.run)}}
+        run: echo ${{toJSON(steps)}}
